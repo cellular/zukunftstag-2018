@@ -27,17 +27,6 @@ a {
     text-align: center;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
 section {
   position: absolute;
   top: 0;
@@ -62,24 +51,6 @@ button {
     border-radius: 4px;
     margin: 0.5em;
     text-transform: uppercase;
-}
-button.positive {
-    background:rgb(1, 224, 152);
-}
-button.negative {
-    background: #d80303;
-}
-
-b {
-    color: #fff;
-    font-size: 1.2em;
-    background: rgba(255,255,255,0.5);
-    padding: 0.4em 0.8em;
-    border-radius: 4px;
-}
-
-span {
-    margin: 0 1em;
 }
 
 svg {

@@ -17,12 +17,7 @@
 </head>
 
 <body>
-    
-    <!-- Erster Screen: Hier geht's los -->
-    <section id="startScreen">        
-        <button onclick="setup()">Start</button>
-    </section>
-    
+        
     <!-- Anzahl der Spieler einstellen -->
     <section id="setupScreen">
         <h1>Anzahl der Spieler</h1>
@@ -53,7 +48,6 @@
     <!-- Zeit abgelaufen! -->
     <section id="timeoutScreen">
         <h1>Zeit abgelaufen</h1>
-        <button onclick="startRound()">Nächster Spieler</button>
     </section>
     
     <!-- Ergebnis -->
@@ -63,7 +57,7 @@
         <p>
             Weiter spielen?
         </p>
-        <button onclick="nextRound()">Neue Runde</button>
+        <button onclick="startRound()">Neue Runde</button>
     </section>
     
     <div>
