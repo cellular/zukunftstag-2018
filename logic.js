@@ -62,9 +62,10 @@ function buzz() {
  * Zeigt die <section> mit der angegebenen ID an und versteckt alle anderen. 
  */
 function showScreen(id) {
-    document.querySelectorAll('section').forEach(function(screen) { 
-        return screen.classList.toggle('active', screen.id == id)
-    });
+    var screens = document.getElementsByTagName('section');
+    for (var i = 0; i < screens.length; i++) {
+        screens[i].classList.toggle('active', screens[i].id == id)
+    }
 }
 
 /**
