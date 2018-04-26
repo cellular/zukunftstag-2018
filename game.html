@@ -67,12 +67,18 @@
     </section>
     
     <div>
-        <audio id="correctAudio" src="audio/correct.mp3"></audio>
-        <audio id="wrongAudio" src="audio/wrong.mp3"></audio>
-        <audio id="buzzerAudio" src="audio/buzzer.mp3"></audio>
-        <audio id="answerAudio" src="audio/bing.mp3"></audio>
-        <audio id="kazooAudio" src="audio/kazoo.mp3"></audio>
-        <audio id="tickingAudio" src="audio/ticking.mp3" loop></audio>
+        <audio id="tickingAudio" loop>
+            <source src="audio/ticking.mp3" type="audio/mp3">
+            <source src="audio/ticking.ogg" type="audio/ogg">
+        </audio>
+        <audio id="buzzerAudio">
+            <source src="audio/buzzer.mp3" type="audio/mp3">
+            <source src="audio/buzzer.ogg" type="audio/ogg">
+        </audio>
+        <audio id="answerAudio">
+            <source src="audio/bing.mp3" type="audio/mp3">
+            <source src="audio/bing.ogg" type="audio/ogg">
+        </audio>
     </div>
 
     <script src="logic.js"></script>
