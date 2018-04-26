@@ -43,8 +43,10 @@ function setBuzzerTimeout() {
     buzzerTimeout = setTimeout(buzz, 35000);
 
     // Buzzer-Sound starten und gleich wieder pausieren!
-    buzzerAudio.play().then(function() { buzzerAudio.pause() });
-
+    var promise = buzzerAudio.play();
+    if (promise) promise.then(function() { buzzerAudio.pause() });
+    else buzzerAudio.pause();
+    
     // Ticken abspielen
     tickingAudio.play();
 }
