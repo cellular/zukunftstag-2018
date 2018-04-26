@@ -43,7 +43,7 @@ function setBuzzerTimeout() {
     buzzerTimeout = setTimeout(buzz, 35000);
 
     // Buzzer-Sound starten und gleich wieder pausieren!
-    buzzerAudio.play().then(() => buzzerAudio.pause());
+    buzzerAudio.play().then(function() { buzzerAudio.pause() });
 
     // Ticken abspielen
     tickingAudio.play();
@@ -62,9 +62,9 @@ function buzz() {
  * Zeigt die <section> mit der angegebenen ID an und versteckt alle anderen. 
  */
 function showScreen(id) {
-    document.querySelectorAll('section').forEach(screen => 
-        screen.classList.toggle('active', screen.id == id)
-    );
+    document.querySelectorAll('section').forEach(function(screen) { 
+        return screen.classList.toggle('active', screen.id == id)
+    });
 }
 
 /**
@@ -124,10 +124,12 @@ function nextPlayer() {
     if (player == players) {
         ranking.innerHTML = times
             .slice(0, players)
-            .map((time, player) => ({ time, player }))
-            .sort((a, b) => a.time - b.time)
+            .map(function(time, player) { return { time: time, player: player }})
+            .sort(function(a, b) { return a.time - b.time })
             .slice(0, 8)
-            .map(rank => `<div>Spieler ${rank.player + 1} (${rank.time})</div>`)
+            .map(function(rank) { 
+                return '<div>Spieler ' + (rank.player + 1) + '(' + rank.time + ')</div>'
+            })
             .join('')
         showScreen('endOfRoundScreen');    
         return;
