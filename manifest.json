@@ -1,0 +1,14 @@
+{
+  "name": "Wanted!",
+  "short_name": "Wanted!",
+  "start_url": "/zukunftstag-2018/game.html",
+  "display": "fullscreen",
+  "background_color": "#17C5FF",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

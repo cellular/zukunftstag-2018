@@ -1,0 +1,83 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-size: 6vmin;
+  font-family: sans-serif;
+  background-color: #17c5ff;
+  color: #fff;
+}
+
+main {
+    padding: 5% 10% 5% 10%;
+}
+
+a {
+    display: block;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    padding: 0.5em 0.8em;
+    margin: 2em 0;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;    
+  display: none;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.active {
+    display: flex;
+}
+
+button {
+    color: #fff;
+    border: none;
+    font-size: 1.2em;
+    background: rgba(0,0,0,0.5);
+    padding: 0.4em 0.8em;
+    border-radius: 4px;
+    margin: 0.5em;
+    text-transform: uppercase;
+}
+button.positive {
+    background:rgb(1, 224, 152);
+}
+button.negative {
+    background: #d80303;
+}
+
+b {
+    color: #fff;
+    font-size: 1.2em;
+    background: rgba(255,255,255,0.5);
+    padding: 0.4em 0.8em;
+    border-radius: 4px;
+}
+
+span {
+    margin: 0 1em;
+}

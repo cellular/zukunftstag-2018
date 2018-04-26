@@ -1,0 +1,11 @@
+CACHE MANIFEST
+index.html
+game.html
+styles.css
+logic.js
+audio/ticking.mp3
+audio/bing.mp3
+audio/correct.mp3
+audio/wrong.mp3
+audio/buzzer.mp3
+audio/kazoo.mp3

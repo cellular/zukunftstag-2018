@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17C5FF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Wanted!">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+    </script>
+</head>
+
+<body>
+    
+    <!-- Erster Screen: Hier geht's los -->
+    <section id="startScreen">        
+        <button onclick="setup()">Start</button>
+    </section>
+    
+    <!-- Anzahl der Spieler einstellen -->
+    <section id="setupScreen">
+        <h1>Anzahl der Spieler</h1>
+        <p>
+            <button onclick="updatePlayers(-1)">-</button>
+            <span id="playerCount">5</span>
+            <button onclick="updatePlayers(+1)">+</button>
+        </p>
+        <button onclick="startRound()">Spiel starten</button>
+    </section>
+
+    <!-- Aufgabe -->
+    <section id="challengeScreen">
+        <h1 id="playerText"></h1>
+        <p id="shape1"></p>
+        <p id="shape2"></p>
+        <p id="shape3"></p>
+        <button onclick="answer()">Fertig!</button>
+    </section>
+
+    <!-- Weiter mit Spieler X -->
+    <section id="nextPlayerScreen">
+        <p>Weiter mit</p>
+        <h1 id="nextPlayerText"></h1>
+        <button onclick="startRound()">Los</button>
+    </section>
+
+    <!-- Zeit abgelaufen! -->
+    <section id="timeoutScreen">
+        <h1>Zeit abgelaufen</h1>
+        <button onclick="startRound()">Nächster Spieler</button>
+    </section>
+    
+    <!-- Ergebnis -->
+    <section id="endOfRoundScreen">
+        <h1>Ergebnis</h1>
+        <div id="ranking"></div>
+        <p>
+            Weiter spielen?
+        </p>
+        <button onclick="nextRound()">Neue Runde</button>
+    </section>
+    
+    <div>
+        <audio id="correctAudio" src="audio/correct.mp3"></audio>
+        <audio id="wrongAudio" src="audio/wrong.mp3"></audio>
+        <audio id="buzzerAudio" src="audio/buzzer.mp3"></audio>
+        <audio id="answerAudio" src="audio/bing.mp3"></audio>
+        <audio id="kazooAudio" src="audio/kazoo.mp3"></audio>
+        <audio id="tickingAudio" src="audio/ticking.mp3" loop></audio>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+
+</html>
