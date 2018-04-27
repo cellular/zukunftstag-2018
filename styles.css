@@ -17,8 +17,11 @@ main {
 }
 
 a {
-    display: block;
     color: #fff;
+}
+
+a.button {
+    display: block;    
     background: rgba(0,0,0,0.5);
     padding: 0.5em 0.8em;
     margin: 2em 0;
